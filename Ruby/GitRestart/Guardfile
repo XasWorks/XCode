@@ -1,0 +1,9 @@
+
+# with Minitest::Unit
+guard :minitest,
+			test_folders: ['tests'],
+			test_file_patterns: ["tc_*.rb"] do
+
+	watch(%r{^lib/git-restart/([^/]+)\.rb}) { |m| "tests/tc_#{m[1]}.rb"}
+	watch(%r{^tests/tc_(.*).rb})
+end

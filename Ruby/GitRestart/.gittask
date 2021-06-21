@@ -1,0 +1,11 @@
+
+GitRestart::Task.new do |t|
+	t.ci_task = true;
+	t.name = "GitRestart Task"
+
+	t.report_status = true;
+
+	t.active = true;
+
+	t.targets << "ruby tests/tc_task.rb"
+end
